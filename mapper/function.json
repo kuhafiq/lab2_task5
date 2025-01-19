@@ -1,0 +1,17 @@
+{
+    "bindings": [
+      {
+        "name": "input",
+        "type": "queueTrigger",
+        "direction": "in",
+        "queueName": "mapper-queue"
+      },
+      {
+        "name": "$return",
+        "type": "queue",
+        "direction": "out",
+        "queueName": "mapper-output"
+      }
+    ]
+  }
+  

@@ -1,4 +1,4 @@
-from app import myApp  # Import from app.py
+from app import myApp  # Import from app/init.py
 
 @myApp.activity_trigger()
 def reducer(data):
