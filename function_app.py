@@ -42,7 +42,7 @@ def master_orchestrator(context: df.DurableOrchestrationContext):
 # --- 3️⃣ Read Input Data from Azure Blob Storage ---
 @myApp.activity_trigger()
 def get_input_data():
-    connection_string = os.getenv("AZURE_BLOB_STRING")  # Fetch from GitHub Secret
+    connection_string = os.getenv("AZURE_BLOB_STRING")  # Fetch from GitHub Secret  #use secret env variable
     container_name = "mrinput"
     blob_service_client = BlobServiceClient.from_connection_string(connection_string)
     container_client = blob_service_client.get_container_client(container_name)
