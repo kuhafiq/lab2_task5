@@ -1,5 +1,5 @@
 import azure.durable_functions as df
-from function_app import myApp
+from app import myApp  # Import from app.py
 
 @myApp.orchestration_trigger(context_name="context")
 def master_orchestrator(context: df.DurableOrchestrationContext):

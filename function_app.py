@@ -1,7 +1,7 @@
 import azure.functions as func
 import azure.durable_functions as df
-
-myApp = df.DFApp(http_auth_level=func.AuthLevel.ANONYMOUS)
+from app import myApp  # Import from app.py
+import orchestrator  # Import orchestrator AFTER defining myApp
 
 # HTTP Trigger to start the orchestrator
 @myApp.route(route="orchestrators/{functionName}")
