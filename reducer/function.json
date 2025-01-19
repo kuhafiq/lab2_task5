@@ -1,17 +1,16 @@
 {
-    "bindings": [
-      {
-        "name": "input",
-        "type": "queueTrigger",
-        "direction": "in",
-        "queueName": "reducer-queue"
-      },
-      {
-        "name": "$return",
-        "type": "queue",
-        "direction": "out",
-        "queueName": "reducer-output"
-      }
-    ]
-  }
-  
+  "bindings": [
+    {
+      "name": "input",
+      "type": "queueTrigger",
+      "direction": "in",
+      "queueName": "reducer-queue"
+    },
+    {
+      "name": "$return",
+      "type": "queue",
+      "direction": "out",
+      "queueName": "reducer-output"
+    }
+  ]
+}
