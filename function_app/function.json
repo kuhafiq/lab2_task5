@@ -5,13 +5,12 @@
         "type": "httpTrigger",
         "direction": "in",
         "name": "req",
-        "methods": ["get", "post"]
+        "methods": ["post"]
       },
       {
-        "type": "http",
-        "direction": "out",
-        "name": "res"
+        "name": "client",
+        "type": "durableClient",
+        "direction": "in"
       }
     ]
-  }
-  
+}
