@@ -5,3 +5,5 @@
 azure-functions
 azure-functions-durable
 azure-storage-blob
+azure-identity
+azure-storage-blob

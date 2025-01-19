@@ -1,18 +1,23 @@
 {
+  "scriptFile": "__init__.py",
   "bindings": [
     {
       "authLevel": "anonymous",
+      "name": "req",
       "type": "httpTrigger",
       "direction": "in",
-      "name": "req",
-      "methods": ["get", "post"]
+      "route": "{functionName}",
+      "methods": ["post", "get"]
     },
     {
+      "name": "$return",
       "type": "http",
-      "direction": "out",
-      "name": "res"
+      "direction": "out"
+    },
+    {
+      "name": "starter",
+      "type": "durableClient",
+      "direction": "in"
     }
-  ],
-  "scriptFile": "__init__.py",
-  "entryPoint": "main"
+  ]
 }
