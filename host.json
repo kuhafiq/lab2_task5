@@ -12,13 +12,7 @@
     "id": "Microsoft.Azure.Functions.ExtensionBundle",
     "version": "[4.*, 5.0.0)"
   },
-  "extensions": {
-    "durableTask": {
-      "hubName": "DurableFunctionsHub",
-      "storageProvider": {
-        "type": "AzureStorage",
-        "connectionStringName": "AzureWebJobsStorage"
-      }
-    }
+  "durableTask": {
+    "hubName": "DurableFunctionsHub"
   }
 }
