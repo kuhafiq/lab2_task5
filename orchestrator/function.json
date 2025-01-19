@@ -5,5 +5,7 @@
       "type": "orchestrationTrigger",
       "direction": "in"
     }
-  ]
+  ],
+  "scriptFile": "__init__.py",
+  "entryPoint": "master_orchestrator"
 }

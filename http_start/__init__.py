@@ -8,7 +8,8 @@ async def main(req: func.HttpRequest, starter: str) -> func.HttpResponse:
     if not function_name:
         return func.HttpResponse("Missing 'functionName' in query string", status_code=400)
 
-    instance_id = await client.start_new(function_name)
-    response = client.create_check_status_response(req, instance_id)
-
-    return response
+    try:
+        instance_id = await client.start_new(function_name)
+        return client.create_check_status_response(req, instance_id)
+    except Exception as e:
+        return func.HttpResponse(f"Error starting orchestration: {str(e)}", status_code=500)

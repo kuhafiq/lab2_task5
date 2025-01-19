@@ -13,6 +13,9 @@
     "version": "[4.*, 5.0.0)"
   },
   "durableTask": {
-    "hubName": "DurableFunctionsHub"
+    "hubName": "DurableFunctionsHub",
+    "storageProvider": {
+      "connectionStringName": "AzureWebJobsStorage"
+    }
   }
 }

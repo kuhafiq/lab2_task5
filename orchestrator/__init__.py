@@ -1,8 +1,10 @@
 import azure.durable_functions as df
 
-def main(context: df.DurableOrchestrationContext):
-    output = []
-    output.append(context.call_activity('mapper', "data"))
-    output.append(context.call_activity('shuffler', "data"))
-    output.append(context.call_activity('reducer', "data"))
-    return output
+@df.orchestration_trigger
+def master_orchestrator(context: df.DurableOrchestrationContext):
+    tasks = []
+    tasks.append(context.call_activity("mapper", "data"))
+    tasks.append(context.call_activity("shuffler", "data"))
+    tasks.append(context.call_activity("reducer", "data"))
+
+    return context.task_all(tasks)
