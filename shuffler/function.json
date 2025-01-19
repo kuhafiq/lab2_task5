@@ -1,17 +1,16 @@
 {
-    "bindings": [
-      {
-        "name": "input",
-        "type": "queueTrigger",
-        "direction": "in",
-        "queueName": "shuffler-queue"
-      },
-      {
-        "name": "$return",
-        "type": "queue",
-        "direction": "out",
-        "queueName": "shuffler-output"
-      }
-    ]
-  }
-  
+  "bindings": [
+    {
+      "name": "input",
+      "type": "queueTrigger",
+      "direction": "in",
+      "queueName": "shuffler-queue"
+    },
+    {
+      "name": "$return",
+      "type": "queue",
+      "direction": "out",
+      "queueName": "shuffler-output"
+    }
+  ]
+}

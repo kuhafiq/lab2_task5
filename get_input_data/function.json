@@ -1,17 +1,16 @@
 {
-    "bindings": [
-      {
-        "name": "input",
-        "type": "queueTrigger",
-        "direction": "in",
-        "queueName": "input-data-queue"
-      },
-      {
-        "name": "$return",
-        "type": "queue",
-        "direction": "out",
-        "queueName": "processed-data-queue"
-      }
-    ]
-  }
-  
+  "bindings": [
+    {
+      "name": "input",
+      "type": "queueTrigger",
+      "direction": "in",
+      "queueName": "input-data-queue"
+    },
+    {
+      "name": "$return",
+      "type": "queue",
+      "direction": "out",
+      "queueName": "processed-data-queue"
+    }
+  ]
+}
